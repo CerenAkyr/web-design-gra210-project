@@ -13,9 +13,9 @@ Employed a responsive design approach to guarantee a seamless experience across 
 Implemented a user-friendly navigation system to help visitors find information effortlessly.
 3. Visual Hierarchy
 Utilized visual hierarchy to highlight key elements, guiding users through the content in a logical and engaging manner.
-4. Color Palette and Typography
+5. Color Palette and Typography
 Created a visually appealing design by carefully selecting a cohesive color palette and typography that aligns with the client's brand.
-5. Client Collaboration
+6. Client Collaboration
 Conducted regular meetings with the client to gather insights, discuss design concepts, and incorporate feedback at key milestones.
-6. User Testing
+7. User Testing
 Conducted usability testing to identify potential pain points and refine the design based on real user feedback.
