@@ -1,0 +1,867 @@
+:root {
+    --animate-delay: 0.05s!important;
+}
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgba(225, 225, 225, 1);
+}
+
+#wrapper {
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 96%;
+    margin: 3rem auto;
+    max-width: 140rem;
+    box-shadow: 1.2rem 1.2rem 2.4rem rgba(0, 0, 0, 0.2);
+}
+
+/*  ===========================================================
+    TYPOGRAPHY
+    =========================================================== */
+h1 {
+    font-size: 8.5rem;
+    margin: 0;
+    letter-spacing: -2px;
+    color: rgba(0, 0, 0, 0.92);
+}
+
+h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3rem;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+    padding: 2.4rem 1.2rem 0 1.2rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 1.2rem 1.2rem 0 1.2rem;
+    color: #C44F47;
+}
+
+ul {
+    text-align: center;
+    padding: 0;
+    margin: auto 5rem auto 0;
+    align-self: center;
+}
+
+li {
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 1);
+    padding: 0 1.2rem;
+}
+
+.heroLine {
+    height: 1rem;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 2.1rem;
+}
+
+.myCard p {
+    padding-left: 1.2rem;
+    padding-right: 1rem;
+    margin-bottom: 3rem;
+}
+
+.sectionTextBox h3 {
+    color: rgba(255, 255, 255, 1);
+    padding-left: 0;
+}
+
+.modalTitle {
+    padding-left: 0;
+}
+
+.modalTitleLight {
+    font-weight: 300;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.modalTitleRed {
+    color: #C44F47;
+}
+
+.dayTitle {
+    color: rgba(255, 255, 255, 1);
+    margin-left: 2rem;
+}
+
+.pBold {
+    font-weight: 700;
+}
+
+/*  ===========================================================
+    LAYOUT
+    =========================================================== */
+header {
+    width: 100%;
+    background-image: url('robot.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 78rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.heroColumn:nth-child(1) {
+    margin: auto;
+}
+
+.heroTextBox {
+    margin-left: 10rem;
+}
+
+.cardLayout {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    width: 96%;
+    margin: 2rem auto;
+}
+
+.myCard {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.4rem;
+}
+
+.myCard img {
+    width: 100%;
+    border-radius: 0.4rem 0.4rem 0 0;
+}
+
+.cardBar {
+    width: 100%;
+    height: 8rem;
+    background: linear-gradient(to right, #C44F47, rgba(196, 79, 71, 0.99), #C44F47);
+    display: flex;
+    /* for vertical alignment, we define this as a flex box */
+    margin-top: auto;
+    border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.myDivider {
+    height: 3rem;
+}
+
+.breakSection {
+    background-image: url('robot4.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 78rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.sectionTextBox {
+    padding: 2rem;
+    margin-top: 4rem;
+    margin-right: 4rem;
+}
+
+.modalDialog {
+    position: fixed; /* Once the dialog box is open, this always covers the browser window */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none; /* all cursor changes are disabled */
+    height: 100%;
+    z-index: 99999999;
+}
+
+.modalDialog:target { /* when we click on the register button, we activate the :target state */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalDialog > div {
+    background-color: rgba(255, 255, 255, 1);
+    width: 61.2%;
+    margin: 10% auto;
+    border-radius: 0.6rem;
+    padding: 3rem 6rem;
+    position: relative; /* the positioning of this div is NOT relative. Instead, the positioning of its' contents are relative.*/
+}
+
+.modalGrids {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "one one one two";
+}
+
+.modalGrid:nth-child(1) {
+    grid-area: one;
+}
+
+.modalGrid:nth-child(2) {
+    grid-area: two;
+}
+
+.modalImg {
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.timeTable {
+    width: 96%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "one two two three three";
+    gap: 4rem;
+    margin: 2rem auto;
+}
+
+.timeCard:nth-child(1) {
+    grid-area: one;
+}
+
+.timeCard:nth-child(2) {
+    grid-area: two;
+}
+
+.timeCard:nth-child(3) {
+    grid-area: three;
+}
+
+.timeCard2 {
+    border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.timeCardTextBox {
+    margin: 0 2rem 0 2rem;
+    padding-bottom: 2rem;
+}
+
+.dayBar {
+    background: linear-gradient(45deg, #C44F47 0%, rgba(196, 79, 71, 0.18));
+    height: 8rem;
+    border-radius: 0.4rem;
+}
+
+.lineSeparatorContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dayLine {
+    height: 0.8rem;
+    width: 50%;
+    background-color: rgba(196, 79, 71, 0.74);
+}
+
+.cardTextBox {
+    margin-left: 3rem;
+}
+
+.lineSeparatorContainer img {
+    height: 3rem;
+    margin: 0 0.5rem;
+}
+
+.contactSection {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-areas: 'one two two two three three four';
+    gap: 3rem;
+}
+
+.contactComponent:nth-child(1) {
+    grid-area: one;
+}
+
+.contactComponent:nth-child(2) {
+    grid-area: two;
+    width: 100%;
+    text-align: center;
+}
+
+.contactComponent:nth-child(3) {
+    grid-area: three;
+}
+
+.contactComponent:nth-child(4) {
+    grid-area: four;
+}
+
+.contactComponent:nth-child(2) img {
+    width: 100%;
+    margin: 1rem auto;
+    border-radius: 5px;
+}
+
+.contactComponent:nth-child(3) form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contactComponent:nth-child(3) input {
+    display: block;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: rgba(0, 0, 0, 0.12);
+    width: 60%;
+    font-family: 'Poppins', sans-serif;
+    height: 3.6rem;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.contactComponent:nth-child(3) button {
+    padding: 0.5rem 1rem;
+    background-color: #C44F47;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    color: #fff;
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contactComponent:nth-child(3) button:hover {
+    background-color: #ab423b;
+}
+.buttonGroup    {
+    display: flex;
+    flex-direction: row;
+}
+.buttonGroup img {
+    margin: 0.5rem;
+}
+.linkedin {
+    width: 4rem;
+    padding-top: 0.2rem;
+}
+.facebook {
+    width: 4.5rem;
+}
+.pSocial {
+    margin-bottom: 0.2rem;
+}
+footer {
+    background-color: rgba(89, 115, 119, 0.52);
+}
+.footerContainer {
+    display: grid;
+    grid-template-columns: repeat(11,1fr);
+    grid-template-areas: 'one one one two three three three four five five five';
+}
+.footerColumn   {
+    padding: 4rem 3rem;
+}
+.footerColumn:nth-child(1) {
+    grid-area: one;
+}
+.footerColumn:nth-child(2) {
+    grid-area: two;
+    margin: auto;
+}
+.footerColumn:nth-child(3) {
+    grid-area: three;
+}
+.footerColumn:nth-child(4) {
+    grid-area: four;
+    margin: auto;
+}
+.footerColumn:nth-child(5) {
+    grid-area: five;
+}
+.footerLine {
+    height: 0.4rem;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 1.2rem 0 1rem 0;
+    width: 100%;
+}
+footer img  {
+    width: 60%;
+}
+.footerTitle {
+    width: 30%;
+    text-align: center;
+    margin: auto;
+}
+footer h4  {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+.footerColumn a {
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 0;
+    padding: 0.4rem;
+    display: block;
+    margin-left: 0.8rem;
+    text-decoration: none;
+    transition: 0.6s;
+}
+.footerColumn a:hover {
+    color: #ffffff;
+}
+.sponsorContainer {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2,1fr);
+}
+.sponsor1 {
+    width: 100%;
+}
+.sponsor2 {
+    margin-top: 1.2rem;
+    width: 70%;
+}
+
+
+.modalFooter {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas: "one one one two two";
+    margin: auto;
+}
+
+.modalFooterColumn:nth-child(1) {
+    grid-area: one;
+}
+
+.modalFooterColumn:nth-child(2) {
+    grid-area: two;
+    text-align: center;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.modalFooterColumn h2 {
+    font-weight: 600;
+    color: black;
+    margin: 3rem 0 0 0;
+    text-align: left;
+}
+
+.modalFooterColumn p {
+    margin-top: 0.4rem;
+    line-height: 2.2rem;
+    width: 90%;
+}
+.fullSizeImg {
+    width: 100%;
+
+}
+.robotImg {
+    width: 70%;
+    margin: auto;
+}
+
+.robotImg2 {
+    width: 50%;
+    margin: auto;
+}
+.modalFooterDialog {
+    position: fixed; /* Once the dialog box is open, this always covers the browser window */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none; /* all cursor changes are disabled */
+    height: 100%;
+    z-index: 999999;
+}
+
+.modalFooterDialog:target { /* when we click on the register button, we activate the :target state */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalFooterDialog > div {
+    background-color: rgba(255, 255, 255, 1);
+    width: 61.2%;
+    margin: 5% auto auto auto;
+    border-radius: 0.6rem;
+    padding: 3rem 6rem;
+    position: relative;
+}
+
+.modalFooterDialogLong > div {
+    background-color: rgba(255, 255, 255, 1);
+    width: 71.2%;
+    margin: 5% auto auto auto;
+    border-radius: 0.6rem;
+    padding: 3rem 6rem;
+    position: relative; /* the positioning of this div is NOT relative. Instead, the positioning of its' contents are relative.*/
+}
+
+.modalFooterDialogLong:target { /* when we click on the register button, we activate the :target state */
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modalFooterDialogLong {
+    position: fixed; /* Once the dialog box is open, this always covers the browser window */
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    pointer-events: none; /* all cursor changes are disabled */
+    height: 100%;
+    z-index: 999999;
+}
+/*  ===========================================================
+    LINKS, NAVIGATION, BUTTONS, ETC...
+    =========================================================== */
+nav {
+    background-color: rgb(89, 115, 119);
+    height: 4.4rem;
+    box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0; /* so that it sticks to the top */
+    display: flex;
+    z-index: 99999;
+}
+
+.navContainer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLogoContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.navLogoContainer img {
+    height: 4rem;
+    margin: auto;
+}
+
+.navLogoContainer:hover img {
+    transform: rotate(360deg);
+    transition: transform 0.8s ease;
+}
+
+.navLogoContainer a {
+    display: flex;
+}
+
+.navLogoContainer h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navLogoContainer:hover h2 {
+    color: rgb(210, 210, 210);
+}
+
+nav a {
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: rgb(210, 210, 210);
+}
+
+.myButton {
+    display: block;
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 1);
+    background-color: #C44F47;
+    font-weight: 700;
+    padding: 1.8rem 2.5rem;
+    margin-top: 2rem;
+    width: fit-content;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    transition: all ease 0.4s;
+    box-shadow: -0.4rem 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.myButton:hover {
+    background-color: #ab423b;
+    box-shadow: -0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.cardButton {
+    background-color: rgba(255, 255, 255, 1);
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 1.8rem 2.5rem;
+    border-radius: 0.4rem;
+    box-shadow: -0.4rem 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    margin: auto;
+    transition: all ease 0.4s;
+}
+
+.cardButton:hover {
+    color: rgba(0, 0, 0, 1);
+    box-shadow: -0.8rem 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+}
+
+.closeButton {
+    position: absolute; /* it is positioned relative to the active modal box */
+    top: -1rem;
+    right: -1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 1);
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    width: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    z-index: 9999999999;
+}
+
+.closeButton:hover {
+    box-shadow: 0 0.8rem 1.6rem rgba(0, 0, 0, 0.2);
+    background-color: rgb(89, 115, 119);
+}
+
+textarea {
+    display: block;
+    outline: none;
+    border: none;
+    resize: none;
+    background-color: rgba(0, 0, 0, 0.12);
+    width: 100%;
+    margin: 1.5rem auto;
+    font-family: 'Poppins', sans-serif;
+    height: 3rem;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+}
+
+/*  ===========================================================
+    RESPONSIVE ELEMENTS
+    =========================================================== */
+
+@media (max-width: 1024px) {
+    h3 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .cardLayout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footerTitle {
+        width: 50%;
+        margin: auto;
+    }
+
+    footer img {
+        height: 3rem;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sponsorContainer {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(1,1fr);
+    }
+    .sponsor1 {
+        width: 80%;
+        height: auto;
+        margin: auto;
+    }
+    .sponsor2 {
+        width: 50%;
+        height: auto;
+        margin: auto;
+    }
+    .modalFooter {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: "one";
+    }
+    .robotImg {
+        display: none;
+    }
+    .fullSizeImg {
+        display: none;
+    }
+}
+
+@media (max-width: 620px) {
+    header {
+        grid-template-columns: repeat(1, 1fr);
+        min-height: 62rem;
+        background-image: none;
+    }
+
+    .heroTextBox {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .heroLine {
+        background-color: black;
+    }
+
+    .cardLayout {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .breakSection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .sectionTextBox h3 {
+        color: black;
+    }
+
+    .sectionTextBox {
+        background-color: rgba(239, 245, 245, 0.4);
+    }
+
+    .breakComponent:nth-child(1), .breakComponent:nth-child(2) {
+        display: none;
+    }
+
+    .breakComponent:nth-child(3) {
+        width: 70%;
+        margin: auto;
+        padding: 0 10% 4rem 10%;
+        border-radius: 0.4rem;
+    }
+
+
+
+    .timeTable {
+        grid-template-areas:
+            "one"
+            "two"
+            "three";
+        grid-template-columns: repeat(1,1fr);
+        gap: 2rem;
+    }
+
+    .footerContainer {
+        grid-template-columns: repeat(1,1fr);
+        grid-template-areas: 'one' 'two' 'three' 'four' 'five';
+        gap: 0;
+    }
+
+    .footerColumn:nth-child(2) {
+        display: none;
+    }
+
+    .footerColumn:nth-child(4) {
+        display: none;
+    }
+
+    .footerTitle {
+        width: 80%;
+        margin: auto;
+    }
+
+    footer img {
+        height: 4rem;
+        width: auto;
+        margin: 0;
+        padding: 0;
+    }
+
+    .sponsorContainer {
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .sponsor1 {
+        width: 80%;
+        height: auto;
+    }
+    .sponsor2 {
+        margin-top: 1.2rem;
+        width: 50%;
+        height: auto;
+    }
+    .contactSection {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 'two' 'three';
+        gap: 3rem;
+        width: 80%;
+        margin: auto;
+    }
+    .navLogoContainer {
+        display: none;
+    }
+    .nav ul {
+        width: 100%;
+        margin: 0;
+    }
+    li {
+        font-size: 12px;
+        font-weight: 400;
+        font-family: 'Roboto Condensed', sans-serif;
+        margin: 0;
+        padding: 4px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    .navContainer {
+        width: 100%;
+        justify-content: center;
+    }
+
+}

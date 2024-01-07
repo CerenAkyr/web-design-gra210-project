@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>RoboCon: Artificial Intelligence Conference</title>
+</head>
+
+<body>
+<div id="wrapper">
+
+    <nav>
+        <div class="navContainer">
+            <div class="navLogoContainer">
+                <a href="#aboutAnchor">
+                    <img src="logo.svg" alt="">
+                    <h2>RoboCon</h2>
+                </a>
+            </div>
+            <ul>
+                <li><a href="#aboutAnchor">ABOUT</a></li>
+                <li><a href="#speakerAnchor">SPEAKERS</a></li>
+                <li><a href="#registerAnchor">REGISTRATION</a></li>
+                <li><a href="#scheduleAnchor">SCHEDULE</a></li>
+                <li><a href="#merchAnchor">MERCHANDISE</a></li>
+                <li><a href="#contactAnchor">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <section class="heroColumn">
+            <section class="heroTextBox animate__animated animate__fadeInLeft" id="aboutAnchor">
+                <h1>RoboCon</h1>
+                <div class="heroLine"></div>
+                <p>RoboCon is an AI conference focused on the robotics field. It allows the participants to examine how
+                    robotics evolved and how to develop it further. The event's goal is to show perspective on how to
+                    train robots in terms of completing tasks and understanding humans while considering ethical
+                    concerns.</p>
+                <p>Please note that this event is closed, and attendance is limited to 200 attendees. Register now
+                    before we are all booked up. Join us on January 20-21, 2024 (Saturday, Sunday). From 10:00 to 17:30,
+                    Bilkent University, Mithat Çoruh Conference Hall.</p>
+                <a class="myButton" href="#openModal">REGISTER NOW!</a>
+            </section>
+        </section>
+        <section class="heroColumn">
+        </section>
+    </header>
+    <div id="openModal" class="modalDialog">
+        <div>
+            <a class="closeButton" href="#close">X</a>
+            <h3 class="modalTitle">RoboCon: <br>
+                <span class="modalTitleLight">ARTIFICIAL INTELLIGENCE CONFERENCE</span><br/>
+                <span class="modalTitleRed">REGISTRATION FORM</span>
+            </h3>
+            <div class="modalGrids">
+                <div class="modalGrid">
+                    <textarea placeholder="   Name / Last Name"></textarea>
+                    <textarea placeholder="   Institution"></textarea>
+                    <textarea placeholder="   Email Address"></textarea>
+                    <a class="myButton">SEND!</a>
+                    <p>A registration link will be sent to the provided email address.</p>
+                </div>
+                <div class="modalGrid">
+                    <img class="modalImg" src="robo1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="myDivider"></div>
+    <h2 id="speakerAnchor">GUEST SPEAKERS</h2>
+    <section class="cardLayout">
+
+        <section class="myCard animate__animated animate__delay-1s animate__fadeInUp">
+            <img src="andrew.jpg" alt="portrait of David Reinfurt">
+            <h3>Andrew<br/>
+                Ng
+            </h3>
+            <h4>DeepLearning.AI Founder<br/>
+                General Partner at AI Fund
+            </h4>
+            <p>Dr. Andrew Ng is an Adjunct Professor at Stanford University’s Computer Science Department. He will talk
+                about the role of AI in robotics, discussing the evolution of AI in robotics and its prospects.
+            </p>
+            <div class="cardBar">
+                <a href="https://www.andrewng.org/" class="cardButton">MORE INFO</a>
+            </div>
+        </section>
+
+        <section class="myCard animate__animated animate__delay-2s animate__fadeInUp">
+            <img src="pieter.jpg" alt="portrait of Alice Rawsthorn">
+            <h3>Pieter<br/>
+                Abbeel</h3>
+            <h4>
+                Berkeley Lab Director<br/>
+                Professor at UC Berkeley
+            </h4>
+            <p>Pieter Abbeel is the co-director of the Berkeley AI Research Lab, and a professor at Berkeley University.
+                He will be discussing the use of reinforcement learning to train robots in complex tasks.
+            </p>
+            <div class="cardBar">
+                <a href="https://people.eecs.berkeley.edu/~pabbeel/" class="cardButton">MORE INFO</a>
+            </div>
+        </section>
+
+        <section class="myCard animate__animated animate__delay-3s animate__fadeInUp">
+            <img src="cynthia.jpg" alt="portrait of Kimon Keramidas">
+            <h3>Cynthia<br/>
+                Breazeal</h3>
+            <h4>Personal Robots Group Founder<br/>
+                Digital Learning MIT Dean
+            </h4>
+            <p>Cynthia Breazeal is the MIT dean for digital learning and the director of the MIT-wide Initiative on
+                Responsible AI. She will talk about how AI can be used to create robots that can understand and respond
+                to human emotions.
+            </p>
+            <div class="cardBar">
+                <a href="https://www.media.mit.edu/people/cynthiab/overview/" class="cardButton">MORE INFO</a>
+            </div>
+
+        </section>
+        <section class="myCard animate__animated animate__delay-4s animate__fadeInUp">
+            <img src="raja.jpg" alt="portrait of Rob Giampietro">
+            <h3>Raja <br/>
+                Chatila</h3>
+            <h4>Robotics Institute Director<br/>
+                Professor at Sorbonne Université
+            </h4>
+            <p>Raja Chatila is Professor emeritus at Sorbonne Université, and previous director of LAAS-CNRS. He will
+                give a speech on the ethical considerations and challenges of AI-powered robots in society.
+            </p>
+            <div class="cardBar">
+                <a href="https://www.isir.upmc.fr/personnel/chatila/" class="cardButton">MORE INFO</a>
+            </div>
+        </section>
+    </section>
+
+    <div class="myDivider"></div>
+
+    <section class="breakSection">
+        <section class="breakComponent"></section>
+        <section class="breakComponent"></section>
+
+        <section class="breakComponent">
+            <section class="sectionTextBox">
+                <h3 id="registerAnchor">EXPERIENCE
+                    THE EVALUATION OF THE<br>
+                    ROBOTS.
+                </h3>
+                <a class="myButton" href="#openModal">REGISTER NOW</a>
+
+            </section>
+        </section>
+    </section>
+
+    <div class="myDivider"></div>
+
+    <h2 id="scheduleAnchor">SCHEDULE INFO</h2>
+    <section class="timeTable">
+
+        <section class="timeCard"></section>
+        <section class="timeCard">
+            <div class="timeCard2">
+                <div class="dayBar">
+                    <h3 class="dayTitle">day I</h3>
+                </div>
+                <div class="timeCardTextBox">
+                    <p>10:00 - 11:00<br/>
+                        <span class="pBold">Opening Ceremony</span></p>
+                    <p>11:00 - 12:00<br/>
+                        <span class="pBold">Talk of Andrew NG</span><br/>
+                        <span class="pBold">Evolution of AI in Robotics</span><br/></p>
+                    <p>12:00 - 13:00<br/>
+                        <span class="pBold">Panel Discussion:</span> <br>
+                        "Trends and Innovations in Robotics Field"</p>
+                    <p>13:00 - 14:30<br/>
+                        <span class="pBold">Networking Lunch</span> <br></p>
+
+                    <div class="lineSeparatorContainer">
+                        <div class="dayLine"></div>
+                        <img src="gear.png" alt="">
+                        <div class="dayLine"></div>
+                    </div>
+
+                    <p>14:30 - 15:30<br/>
+                        <span class="pBold">Talk of Pieter Abbeel</span><br/>
+                        <span class="pBold">Reinforcement Learning in Robotics</span><br/></p>
+                    <p>15:30 - 16:30<br/>
+                        <span class="pBold">Panel Discussion:</span> <br>
+                        "Best AI Practices Over Periods"</p>
+                    <p>16:30 - 17:30<br/>
+                        <span class="pBold"> Workshop: <br></span>
+                        "Implementation of an Efficient Deep RL Algorithm"<br/></p>
+                </div>
+            </div>
+
+        </section>
+        <section class="timeCard">
+            <div class="timeCard2">
+                <div class="dayBar">
+                    <h3 class="dayTitle">day II</h3>
+                </div>
+                <div class="timeCardTextBox">
+                    <p>10:00 - 11:00<br/>
+                        <span class="pBold">Welcome Coffee</span></p>
+
+                    <p>11:00 - 12:00<br/>
+                        <span class="pBold">Talk of Cynthia Breazeal</span><br/>
+                        <span class="pBold">Robots Responding to Humans</span><br/></p>
+                    <p>12:00 - 13:00<br/>
+                        <span class="pBold">Panel Discussion:</span> <br>
+                        "Advancements and Challenges in Robotic Applications"</p>
+                    <p>13:00 - 14:30<br/>
+                        <span class="pBold">Networking Lunch</span> <br></p>
+
+                    <div class="lineSeparatorContainer">
+                        <div class="dayLine"></div>
+                        <img src="gear.png" alt="">
+                        <div class="dayLine"></div>
+                    </div>
+
+                    <p>14:30 - 15:30<br/>
+                        <span class="pBold">Talk of Raja Chatila</span><br/>
+                        <span class="pBold">Ethical Challenges of AI Implementations</span><br/></p>
+                    <p>15:30 - 16:30<br/>
+                        <span class="pBold"> Workshop: <br></span>
+                        "Building Ethical AI Systems in Robotics"<br/></p>
+                    <p>16:30 - 17:30<br/>
+                        <span class="pBold">Closing Ceremony</span> <br><br></p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <div class="myDivider"></div>
+
+    <section class="merchContainer">
+        <h2 id="merchAnchor">MERCHANDISE</h2>
+        <p class="merchText">Special merch for the 10th anniversary of RoboCon! <br>
+            Purchase now, pay at register!</p>
+        <section class="merch">
+            <div class="merchCard">
+                <h1>Mousepad</h1>
+                <img src="mousepad.png" alt="" class="merchImg">
+                <p>Price: $5</p>
+                <button class="add-item-button" onclick="toggleItem(this, 'Mousepad')">+</button>
+            </div>
+            <div class="merchCard">
+                <h1>Tote Bag</h1>
+                <img src="totebag.png" alt="" class="merchImg">
+                <p>Price: $10</p>
+                <button class="add-item-button" onclick="toggleItem(this, 'Tote Bag')">+</button>
+            </div>
+            <div class="merchCard">
+                <h1>RoboCon T-shirt</h1>
+                <img src="tshirtmerch.png" alt="" class="merchImg">
+                <p>Price: $17</p>
+                <button class="add-item-button" onclick="toggleItem(this, 'T-shirt')">+</button>
+            </div>
+            <div class="merchCard">
+                <h1>Nostalgic Wind Up Toy</h1>
+                <img src="robottoymerch.png" alt="" class="merchImg">
+                <p>Price: $16</p>
+                <button class="add-item-button" onclick="toggleItem(this, 'Nostalgic Wind Up Toy')">+</button>
+            </div>
+            <script>
+                // Array to store added items
+                let addedItems = [];
+                function toggleItem(button, itemName) {
+                    if (button.innerHTML === "+") {
+                        button.innerHTML = "🗑";
+                        // Add the item to the list
+                        addedItems.push(itemName);
+                    } else {
+                        button.innerHTML = "+";
+                        // Remove the item from the list
+                        const index = addedItems.indexOf(itemName);
+                        if (index !== -1) {
+                            addedItems.splice(index, 1);
+                        }
+                    }
+                    // Display the current list in the console
+                    console.log("Added Items:", addedItems);
+                    updateAddedItemsList();
+                }
+                function updateAddedItemsList() {
+                    const addedItemsList = document.getElementById("addedItemsList");
+                    if (addedItems.length > 0) {
+                        addedItemsList.innerHTML = addedItems.join("<br>");
+                    } else {
+                        addedItemsList.innerHTML = "No items added.";
+                    }
+                }
+            </script>
+        </section>
+        <div class="buttonRightAlignment">
+            <a href="#openPurchase" class="myButton">Continue With Purchase</a>
+        </div>
+        <div id="openPurchase" class="modalFooterDialog">
+            <div>
+                <a class="closeButton" href="#close">X</a>
+                <h3 class="modalTitle">RoboCon: <br>
+                    <span class="modalTitleLight">ARTIFICIAL INTELLIGENCE CONFERENCE</span><br/>
+                    <span class="modalTitleRed">MERCHANDISE PAYMENT</span>
+                </h3>
+                <div class="modalMerch">
+                    <div class="modalMerchColumn">
+                        <h2>Items You Added:</h2>
+                        <p id="addedItemsList">No items added.</p>
+                    </div>
+                    <div class="modalMerchColumn">
+                        <div>
+                            <h2>Payment Method:</h2>
+                            <form>
+                                <label>
+                                    <input type="radio" name="paymentMethod" value="creditCard" checked>
+                                    By Credit Card at Register
+                                </label>
+                                <br>
+                                <label>
+                                    <input type="radio" name="paymentMethod" value="cash">
+                                    By Cash at Register
+                                </label>
+                            </form>
+                            <div class="buttonRightAlignment">
+                                <a href="" class="myButton">Purchase</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="myDivider"></div>
+    <h2 id="contactAnchor">CONTACT INFORMATION</h2>
+    <section class="contactSection">
+        <section class="contactComponent"></section>
+        <section class="contactComponent">
+            <a href="https://maps.app.goo.gl/tBJqwNJo6CpV8aUFA" target="_blank">
+                <img src="muhendislik.jpg" alt="">
+            </a>
+        </section>
+        <section class="contactComponent">
+            <p><span class="pBold">Bilkent University</span><br/>
+                Faculty of Engineering<br/>
+                Computer Science Department<br/>
+                TR-06800 Bilkent, Ankara, Turkiye
+            </p>
+
+            <p><span class="pBold">Phone:</span>+90 (312) 290 1629<br/>
+                <span class="pBold">Fax:</span> +90 (312) 266 4136<br/>
+                <span class="pBold">Email:</span> cs [at] bilkent.edu.tr
+            </p>
+
+            <p><span class="pBold">Join Our Newsletter:</span></p>
+            <form action="" method="post">
+                <input type="email" name="email" id="email" placeholder="   Enter your email">
+                <button type="submit">Submit</button>
+            </form>
+
+            <p class="pSocial"><span class="pBold">Follow Us on Social Media:</span></p>
+            <div class="buttonGroup">
+                <a href="https://www.linkedin.com/school/bilkent-university/" target="_blank"><img class="linkedin"
+                                                                                                   src="linkedin.png"
+                                                                                                   alt=""></a>
+                <a href="https://www.facebook.com/BilkentUniversitesi/?locale=tr_TR" target="_blank"><img
+                        class="facebook" src="facebook.png" alt=""></a>
+            </div>
+        </section>
+    </section>
+    <div class="myDivider"></div>
+
+    <footer>
+        <section class="footerTitle">
+            <h3>RoboCon:</h3>
+            <div class="footerLine"></div>
+            <h4>Artificial Intelligence Conference</h4>
+        </section>
+
+        <section class="footerContainer">
+            <section class="footerColumn">
+                <h4>Workshops & Panel Discussions</h4>
+                <a href="#openWorkshop1">Efficient Deep RL Algorithm Implementation</a>
+                <a href="#openWorkshop2">Building Ethical AI Systems in Robotics</a>
+                <a href="#openPanelDiscussion">Panel Discussion Topics and Details</a>
+            </section>
+            <section class="footerColumn">
+                <img src="gear.png" alt="">
+            </section>
+            <section class="footerColumn">
+                <h4>Links</h4>
+                <a href="#openFAQ">Frequently Asked Questions</a>
+                <a href="https://w3.bilkent.edu.tr/bilkent/" target="_blank">Bilkent University</a>
+                <a href="https://w3.cs.bilkent.edu.tr/" target="_blank">Computer Science Department</a>
+            </section>
+            <section class="footerColumn">
+                <img src="gear.png" alt="">
+            </section>
+            <section class="footerColumn">
+                <h4>Sponsored by</h4>
+                <div class="sponsorContainer">
+                    <img class="sponsor1" src="sponsor1.png" alt="sponsor logo"/>
+                    <img class="sponsor2" src="sponsor2.png" alt="sponsor logo"/>
+                </div>
+            </section>
+        </section>
+        <div id="openPanelDiscussion" class="modalFooterDialog">
+            <div>
+                <a class="closeButton" href="#close">X</a>
+                <h3 class="modalTitle">RoboCon: <br>
+                    <span class="modalTitleLight">ARTIFICIAL INTELLIGENCE CONFERENCE</span><br/>
+                    <span class="modalTitleRed">PANEL DISCUSSIONS</span>
+                </h3>
+                <div class="modalFooter">
+                    <div class="modalFooterColumn">
+                        <h2>Trends and Innovations in Robotics Field</h2>
+                        <p>Delve into the latest trends shaping the field. <br>
+                            We'll explore the transformative impact on
+                            industries,
+                            current applications, and the future outlook.
+                        </p>
+
+                        <h2>Best AI Practices Over Periods</h2>
+                        <p>From historical perspectives to current best practices, ethical considerations, and
+                            real-world case studies, we'll explore the essential elements that define successful and
+                            responsible AI development.
+                        </p>
+
+                        <h2>Advancements and Challenges in Robotic Applications</h2>
+                        <p>From breakthroughs in medical robotics to human-robot collaboration, we'll explore the
+                            transformative impact on industries.
+                        </p>
+                    </div>
+                    <div class="modalFooterColumn">
+                        <img class="fullSizeImg" src="panelDiscussion.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="openFAQ" class="modalFooterDialogLong">
+            <div>
+                <a class="closeButton" href="#close">X</a>
+                <h3 class="modalTitle">RoboCon: <br>
+                    <span class="modalTitleLight">ARTIFICIAL INTELLIGENCE CONFERENCE</span><br/>
+                    <span class="modalTitleRed">FREQUENTLY ASKED QUESTIONS</span>
+                </h3>
+                <div class="modalFooter">
+                    <div class="modalFooterColumn">
+                        <h2>What can participants expect to gain from
+                            attending?
+                        </h2>
+                        <p>Participants can expect
+                            insightful keynote presentations, interactive panel discussions, hands-on workshops, and
+                            networking opportunities. The conference aims to provide a platform for learning,
+                            collaboration, and inspiration in the rapidly evolving AI landscape.
+                        </p>
+
+                        <h2>How can I register for RoboCon, what are the registration fees?</h2>
+                        <p>To register for RoboCon, please visit our official conference website. The registration
+                            process is simple and can be completed online. The event is completely free!
+                        </p>
+
+                        <h2>Is lunch provided, are there any specific dietary accommodations available?</h2>
+                        <p>Yes, lunch will be provided. Please let us know during the registration process if you have
+                            any specific dietary requirements. Our catering team will make every effort to accommodate
+                            your needs.
+                        </p>
+                    </div>
+                    <div class="modalFooterColumn">
+                        <img class="robotImg" src="FAQ.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="openWorkshop1" class="modalFooterDialog">
+            <div>
+                <a class="closeButton" href="#close">X</a>
+                <h3 class="modalTitle">RoboCon: <br>
+                    <span class="modalTitleLight">ARTIFICIAL INTELLIGENCE CONFERENCE</span><br/>
+                    <span class="modalTitleRed">EFFICIENT DEEP RL ALGORITHM</span>
+                </h3>
+                <div class="modalFooter">
+                    <div class="modalFooterColumn">
+                        <h2>Workshop Highlights</h2>
+                        <p>Explore key concepts and techniques in deep reinforcement learning. <br>
+                            Engage in practical exercises to implement efficient DRL algorithms. <br>
+                            Learn how to optimize and fine-tune algorithms for better <br>
+                            performance.
+                        </p>
+
+                        <h2>Key Topics</h2>
+                        <p>Introduction to Deep Reinforcement Learning <br>
+                            Common DRL Algorithms Overview <br>
+                            Optimization Techniques for Efficiency <br>
+                            Case Studies and Real-World Applications <br>
+                        </p>
+                    </div>
+                    <div class="modalFooterColumn">
+                        <img class="robotImg" src="workshop.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="openWorkshop2" class="modalFooterDialog">
+            <div>
+                <a class="closeButton" href="#close">X</a>
+                <h3 class="modalTitle">RoboCon: <br>
+                    <span class="modalTitleLight">ARTIFICIAL INTELLIGENCE CONFERENCE</span><br/>
+                    <span class="modalTitleRed">BUILDING ETHICAL SYSTEMS</span>
+                </h3>
+                <div class="modalFooter">
+                    <div class="modalFooterColumn">
+                        <h2>Workshop Highlights</h2>
+                        <p>Understand ethical considerations in AI development. <br>
+                            Explore the impact of robotics on society and ethical implications. <br>
+                            Discuss ethical considerations in human-robot interaction. <br>
+                            Learn industry best practices for building ethical AI systems. <br>
+                        </p>
+                        <h2>Key Topics</h2>
+                        <p>Introduction to Ethical AI in Robotics<br>
+                            Ethical Frameworks and Guidelines <br>
+                            Human-Centric Design in Robotics <br>
+                            Privacy and Security Considerations <br>
+                        </p>
+                    </div>
+                    <div class="modalFooterColumn">
+                        <img class="robotImg" src="workshop2.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+
+</html>
