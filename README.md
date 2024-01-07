@@ -1,4 +1,4 @@
-## Gra210 Web Design Course Project
+# Gra210 Web Design Course Project
 + Usability:
 Prioritize user experience by implementing intuitive navigation, clear information architecture, and responsive design to ensure accessibility across various devices.
 + Design Principles:
@@ -6,7 +6,7 @@ Adhere to design fundamentals, such as visual hierarchy, color theory, and typog
 + Client-Directed Approach:
 Ensuring client vision, goals, and feedback are integrated into the final product.
 
-# Features and Functionality
+## Features and Functionality
 1. Responsive Design
 Employed a responsive design approach to guarantee a seamless experience across desktops, tablets, and mobile devices.
 2. Intuitive Navigation
